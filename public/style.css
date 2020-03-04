@@ -1,0 +1,19 @@
+body {
+  background-color:yellow;
+  background-image:url('battle-background.jpg');
+  background-position:center;
+}
+
+h1 {
+  font-style: italic;
+  color: powderblue
+}
+
+h2 {
+  font-style: italic;
+  color: powderblue
+}
+
+/* .main {
+
+} */

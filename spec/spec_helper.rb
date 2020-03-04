@@ -15,10 +15,13 @@ ENV['RACK_ENV'] = 'test'
 
 #require sinatra app file
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
+#require web helpers file for feature tests
+require File.join(File.dirname(__FILE__), 'features', 'web_helpers')
 
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+
 #tell Capybara about our app class
 Capybara.app = Battle
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
