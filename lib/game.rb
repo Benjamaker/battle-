@@ -1,6 +1,10 @@
 class Game
+
+  attr_reader :current_turn
+
   def initialize(player_1, player_2)
     @players = [player_1, player_2]
+    @current_turn = player_1
   end
 
   def player_1
@@ -13,9 +17,13 @@ class Game
 
   def attack(player)
     player.reduce_hp
-    # raise("You killed Player 2!") if player.hp.zero?
+    switch_turns
   end
 
+  private
 
+  def switch_turns
+    @current_turn == player_1 ? @current_turn = player_2 : @current_turn = player_1
+  end
 
 end

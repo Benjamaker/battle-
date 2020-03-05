@@ -7,6 +7,12 @@ describe Game do
   let(:player_1) { double(:player) }
   let(:player_2) { double(:player) }
 
+  let(:player_2_spy) { spy(:player) }
+
+  it "starts as player_1 as default" do
+    expect(game.current_turn).to eq(player_1)
+  end
+
   context '#player_1' do
 
     it "gets the first player" do
@@ -24,10 +30,24 @@ describe Game do
   context '#attack' do
 
     it "damages an opponent" do
-      # allow(sri_spy).to receive(:attack).with(player_name)
+      # allow(player_2_spy).to receive(:attack).with(player_name)
       expect(player_2).to receive(:reduce_hp)
       game.attack(player_2)
     end
+
+  context '#switch_turns' do
+    
+    before do
+      allow(player_2).to receive(:reduce_hp)
+    end
+
+    it "switches turns" do
+      game.attack(player_2)
+      expect(game.current_turn).to eq(player_2)
+    end
+  end
+
+
 
     # it "raises an error message when player 2's hp reaches 0" do
     #   allow(player_2).to receive(:reduce_hp).once
