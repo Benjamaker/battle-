@@ -5,14 +5,19 @@ body {
 }
 
 h1 {
+  font-family: monospace;
   font-style: italic;
   color: powderblue
 }
 
 h2 {
+
+  font-family: monospace;
   font-style: italic;
   color: powderblue
 }
+
+
 
 /* .main {
 

@@ -27,13 +27,8 @@ describe Player do
       expect(ben.hp).to eq Player::DEFAULT_HP
     end
 
-  context '#attack' do
+  end  
 
-    it "damages an opponent" do
-      # allow(sri_spy).to receive(:attack).with(player_name)
-      expect(sri).to receive(:reduce_hp)
-      ben.attack(sri)
-    end
-  end
+
 
 end
