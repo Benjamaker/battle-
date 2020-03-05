@@ -4,6 +4,10 @@ body {
   background-position:center;
 }
 
+.main{
+
+}
+
 h1 {
   font-family: monospace;
   font-style: italic;
@@ -11,14 +15,23 @@ h1 {
 }
 
 h2 {
-
   font-family: monospace;
   font-style: italic;
   color: powderblue
 }
 
+form {
+  text-align: left;
+}
 
-
-/* .main {
-
-} */
+.player_1 {
+  color: black;
+}
+.player_2 {
+  color: green;
+}
+.button {
+  background-color: navy;
+  color: white;
+  outline-color: navy;
+}
