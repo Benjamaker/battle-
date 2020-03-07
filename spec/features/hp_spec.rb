@@ -15,3 +15,12 @@ feature 'attack does damage' do
     expect(page).to have_content 'Sri: 50HP'
   end
 end
+
+feature 'players can die' do
+  scenario "player will die when HP gets to zero" do
+    sign_in_and_play
+    10.times { attack_cycle }
+    click_link "Attack"
+    expect(page).to have_content("You killed Sri!")
+  end
+end

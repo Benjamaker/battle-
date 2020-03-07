@@ -1,5 +1,15 @@
-<%= @game.player_1.player_name %> vs. <%= @game.player_2.player_name %><br>
-<%= @game.current_turn.player_name %>'s turn<br>
-<%= @game.player_1.player_name %>: <%= @game.player_1.hp %>HP<br>
-<%= @game.player_2.player_name %>: <%= @game.player_2.hp %>HP<br>
-<a href="/attack">Attack</a>
+<!DOCTYPE html>
+<html>
+  <h1><%= @game.player_1.player_name %> vs. <%= @game.player_2.player_name %></h1><br>
+  <head>
+    <%= @game.current_turn.player_name %>'s turn<br>
+  </head>
+  <body>
+    <%= @game.player_1.player_name %>: <%= @game.player_1.hp %>HP<br>
+    <%= @game.player_2.player_name %>: <%= @game.player_2.hp %>HP<br>
+  </body>
+
+  <a href="/attack">Attack</a>
+  <!-- <input type="submit" href="/attack" value="Attack"> -->
+
+</html>

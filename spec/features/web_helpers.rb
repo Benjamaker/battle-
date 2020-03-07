@@ -4,3 +4,8 @@ def sign_in_and_play
   fill_in :player_2_name, with: 'Sri'
   click_button 'Submit'
 end
+
+def attack_cycle
+  click_link 'Attack'
+  click_button 'OK'
+end
